@@ -1,0 +1,7 @@
+- iniciar projeto
+
+expo init <nome da pasta>
+
+- rodar projeto
+
+expo start

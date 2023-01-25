@@ -1,0 +1,64 @@
+
+- instalando dependencia do typescrpit
+
+    npm install typescript -D
+
+- Comando para gerar tsconfig.json para mudar a tag "target": "es2016" para "target": "es2020"
+
+    npx tsc --init  
+    npm -i tsx -D
+
+- Comando para rodar o código com Typescript em dsv
+
+    npx tsx src/server.ts  OU  tsx watch src/server.ts 
+
+- após criar o script "dev" no package.json para encurtar o caminho "tsx src/server.ts", para rodar
+    se usa o comando abaixo
+
+    npm run dev
+
+
+- instalar ORM de banco de dados da prisma (ambiente dsv e segunda linha o pra valer)
+	
+	npm i -D prisma
+
+	npm i @prisma/client
+
+	nsx prisma init --datasource-provider SQLite
+
+- comando para rodar o prisma e subir os commits
+
+	npx prisma migrate dev
+
+- para rodar o db basta rodar
+
+	npx prisma studio
+
+- para o front conseguir acessar as rotas do back temos que criar um cors, a dependencia dele é:
+
+	npm i @fastify/cors
+
+- após criar o arquivo seed do prisma para roda-lo executar o comando:
+
+    npx prisma db seed
+
+    ps: lembrar de ir no package.json e por :
+    
+    "prisma": {
+    "seed": "tsx prisma/seed.ts"
+    }
+
+- Caso haja problemas com a config da seed:
+
+Problemas com a seed.
+1:Vai no repositório do projeto(ta lá nos matérias auxiliares), pega a seed que tem lá e o schema.prisma substitui os dois. Apos isso faz o npx prisma migrate dev. 
+2: abre o banco pelo npx prisma studio e deleta todos os dados que tem lá, seleciona todos e faz uma limpa em todas as tabelas
+3: agora sim executa a seed npx prisma db seed
+
+- faz um try catch no trecho de código: (usado no routes.ts)
+   npm i zod
+
+- ajuda a trabalhar com esquemas de datas como a de hoje ( usado no routes.ts)
+npm i dayjs 
+
+00:45

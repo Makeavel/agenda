@@ -1,0 +1,29 @@
+-para criar o projeto, rodar o comando:
+
+    yarn create vite ou npm create vite@latest
+
+ Obs: selecione react e depois Typescript
+
+- mandar um npm install para instalar todas as dependencias
+
+    npm install
+
+- para rodar o frontend só mandar um:
+
+    npm run dev
+
+    o vite vai entender sozinho e rodar o front
+
+- para configurar o tailwind
+
+tailwind css setup:
+1 - npm i tailwindcss postcss autoprefixer
+2 - npx tailwindcss init -p
+3 - Criar src/styles/global.css
+4 - Adicionar essas linhas dentro do global.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+5 - Em tailwind.config.cjs adicionar "./src/*/.tsx" dentro de content
+6 - Adicionar import "./styles/global.css"; em main.tsx
+
